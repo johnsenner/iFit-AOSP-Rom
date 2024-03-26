@@ -38,6 +38,28 @@ Initialize repo with the Android P Preview 4 branch of the AOSP manifest.
 
 repo init -u https://android.googlesource.com/platform/manifest -b android-p-preview-4
 
+Initialize repo with the Android P Preview 4 branch of the AOSP manifest.
+
+repo init -u https://android.googlesource.com/platform/manifest -b android-p-preview-4
+
+Build AOSP:
+
+source build/envsetup.sh
+lunch <device_codename>-userdebug
+make -j8
+
+device_codename: If you're building a custom ROM for a specific device, you'll need to use the correct <device_codename> for that device. Here are a few examples of device codenames for popular Android devices:
+
+Nexus 5X: bullhead
+Nexus 6P: angler
+Pixel: sailfish (Pixel 1), marlin (Pixel XL), walleye (Pixel 2), taimen (Pixel 2 XL)
+Samsung Galaxy S10: beyond1lte
+Samsung Galaxy Note 10: d1
+
+Example:
+lunch bullhead-userdebug
+
+
 Links:
 
 VirtualBox: https://www.virtualbox.org/wiki/Downloads
